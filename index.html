@@ -229,6 +229,7 @@
             margin-top: 20px;
             border: 3px dashed #c59b6b;
             box-shadow: inset 0 0 30px #ffe9c4;
+            width: 100%;
         }
 
         .expand-flex {
@@ -270,6 +271,12 @@
             box-shadow: 0 8px 0 #642f12;
             margin-top: 15px;
             border: 2px solid #ffc107;
+            transition: 0.2s;
+        }
+
+        .btn-watch:hover {
+            background: #d46b36;
+            transform: translateY(-3px);
         }
 
         /* ========== கீழ்ப்பகுதி ========== */
@@ -293,12 +300,15 @@
             border-radius: 100px;
             border: 3px solid #f1c40f;
             font-size: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         @media (max-width: 700px) {
             .hero-title-tam { font-size: 2.6rem; }
             .py-badge { font-size: 1.5rem; }
             .week-card { flex-direction: column; text-align: center; }
+            .contact-glow { font-size: 1.4rem; padding: 15px 25px; }
         }
     </style>
 </head>
@@ -347,12 +357,12 @@
             { week:1, title:"தொழில்நுட்ப அறிமுகம்", icon:"🔧",
               desc:"தொல்காப்பியம் அறிமுகம். பைத்தான் மென்பொருள் மற்றும் Open-Tamil நூலகத்தை நிறுவுதல்.",
               sutra:"நூற்பா 1‑2", py:"pip install open-tamil",
-              tam:"அகத்தியம்‌, தொல்காப்பிய மரபு", pyDetail:"list, import, installation" },
+              tam:"அகத்தியம், தொல்காப்பிய மரபு", pyDetail:"list, import, installation" },
 
             { week:2, title:"எழுத்து அறிமுகம் & பட்டியல்", icon:"📋",
               desc:"எழுத்துக்களின் வகைப்பாடு (முதலெழுத்து, சார்பெழுத்து). பைத்தானில் பட்டியல் (List) உருவாக்குதல்.",
               sutra:"நூற்பா 1‑2", py:"letters = ['அ','ஆ','இ']",
-              tam:"மெய்‌, உயிர், ஆய்தம்", pyDetail:"list.append(), indexing"},
+              tam:"மெய், உயிர், ஆய்தம்", pyDetail:"list.append(), indexing"},
 
             { week:3, title:"உயிர் எழுத்துக்கள்", icon:"🔊",
               desc:"குற்றெழுத்து மற்றும் நெட்டெழுத்து விளக்கம். மாறிகளில் மதிப்புகளைச் சேமித்தல்.",
@@ -375,14 +385,14 @@
               tam:"உயிர் வரிசைமுறை", pyDetail:"for loop, flowchart"},
 
             { week:7, title:"மெய் எழுத்துக்கள் & செயற்கை நுண்ணறிவு", icon:"🤖",
-              desc:"18 மெய் எழுத்துக்களின் வகைப்பாடு. DeepSeek போன்ற AI கருவிகள் மூலம் நிரல் எழுதும் முறை.",
-              sutra:"நூற்பா 9", py:"# DeepSeek prompt: 'மெய் வரிசை தருக'",
+              desc:"18 மெய் எழுத்துக்களின் வகைப்பாடு. DeepSeek போன்ற AI கருவிகள் மூலம் நிரல் எழுதும் முறை. (வல்லினம், மெல்லினம், இடையினம்)",
+              sutra:"நூற்பா 9, 19-21", py:"# DeepSeek prompt: 'மெய் வரிசை தருக'",
               tam:"வல்லினம், மெல்லினம், இடையினம்", pyDetail:"AI code generator, prompt engineering"},
 
-            { week:8, title:"உயிர்மெய் & உருவ மாற்றம்", icon:"🔄",
-              desc:"உயிர்மெய் எழுத்துக்களின் பிறப்பு, புள்ளியின் இயல்பு. செயல்பாடுகள் (Functions) def மூலம்.",
-              sutra:"நூற்பா 10‑18", py:"def uyirmei(mei,uyir): return mei+uyir",
-              tam:"புள்ளி இடுவதன் மூலம் மாற்றம்", pyDetail:"function, return, parameters"}
+            { week:8, title:"உயிர்மெய் & மெய்ம்மயக்க விதிகள்", icon:"🔄",
+              desc:"உயிர்மெய் எழுத்துக்களின் பிறப்பு, புள்ளியின் இயல்பு. மெய்யெழுத்துக்கள் சேரும் முறைகள். செயல்பாடுகள் (Functions) def மூலம்.",
+              sutra:"நூற்பா 10‑18, 22‑33", py:"def uyirmei(mei,uyir): return mei+uyir",
+              tam:"புள்ளி இடுவதன் மூலம் மாற்றம், மெய்ம்மயக்கம்", pyDetail:"function, return, parameters, dict, try-except"}
         ];
 
         const container = document.getElementById('weekGrid');
@@ -436,7 +446,7 @@
                     <div class="python-card">
                         <i class="fas fa-code"></i> <strong>Python / AI பயிற்சி</strong><br><br>
                         <p>${w.pyDetail}</p>
-                        <pre style="background:#11212e;padding:8px;border-radius:18px;color:#b0e6b0;">${w.py}</pre>
+                        <pre style="background:#11212e;padding:12px;border-radius:18px;color:#b0e6b0;overflow-x:auto;">${w.py}</pre>
                     </div>
                 </div>
                 <a href="#" class="btn-watch" target="_blank"><i class="fas fa-play-circle"></i> காணொலி & மூலநிரல் பார்க்க</a>
@@ -468,13 +478,5 @@
     })();
 </script>
 
-<!-- கூடுதல் வசதிக்காக 9–10 பாடம் இல்லை; 8 வாரம் மட்டுமே. 8 வாரத்தின் பிறகு மெய்ம்மயக்க விதிகள் பாடம் 9,10 என்பதை உள்ளடக்கியிருக்கலாம்; 
-     ஆனால் நீங்கள் கொடுத்த 10 பாடப் பட்டியலில் 8 வாரத்தில் அடக்கி இருக்கிறீர்கள் (வாரம்8 இறுதி வரை). வாரம் 9,10 க்கு தனியாக இடமில்லை. 
-     உங்கள் பத்து பாடங்களையும் 8 வாரங்களாகப் பகுத்துள்ளோம் (பாடம் 9 மெய்ம்மயக்க விதிகள்-1, பாடம் 10 மெய்ம்மயக்க விதிகள்-2 -> இவை வாரம்7,8 உடன் இணைக்கப்பட்டுள்ளன. 
-     கீழே குறிப்பு: -->
-<div style="margin-top: 20px; text-align: center; background: #faf0db; border-radius: 80px; padding: 15px; border: 3px solid #c89f4e;">
-    <i class="fas fa-gem"></i>  பத்துப் பாடங்களும் 8 வாரங்களில் தொகுக்கப்பட்டன (பா. 9 & 10 → வாரம் 7,8 இல் உள்ளன). 
-    <i class="fas fa-gem"></i>
-</div>
 </body>
 </html>
