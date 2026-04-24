@@ -1,2 +1,52 @@
-# Tolkaappiyam-with-AI-Python
-Tolkaappiyam with AI &amp; Python is an experimental learning project that explores the classical Tamil grammar text Tolkāppiyam using computational methods. The repository includes datasets, examples, and tools to connect Tamil linguistic tradition with AI, NLP, and Python-based analysis.
+# தொல்காப்பியம்: பைத்தான்-செய்யறிவு வழி உரை (Tolkappiyam with AI-Python)
+
+[![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![Library](https://img.shields.io/badge/Library-Open--Tamil-green.svg)](https://github.com/nandhakumar/open-tamil)
+[![Instructor](https://img.shields.io/badge/Instructor-Dr.Sathiyaraj_Thangasamy-red)](#)
+
+தொல்காப்பிய நூன்மரபு நூற்பாக்களைப் பைத்தான் (Python) நிரலாக்கம் மற்றும் செயற்கை நுண்ணறிவு (AI) கருவிகளின் உதவியுடன் ஆய்வு செய்யும் நவீனப் பாடத்திட்டம்.
+
+## 👨‍🏫 பயிற்றுநர் விவரம்
+**முனைவர் சத்தியராஜ் தங்கச்சாமி (நேயக்கோ)**
+*தமிழ் கணிமை மற்றும் மொழியியல் ஆய்வாளர்.*
+*உதவிப் பேராசிரியர் | முதன்மை ஆசிரியர்.*
+
+---
+
+## 🎯 பாடநெறியின் நோக்கம்
+தொல்காப்பிய இலக்கண விதிகளைத் தரவுகளாக (Data) மாற்றி, கணினி மொழியில் அதன் நுட்பங்களை விளக்குதல். இதன் மூலம் தமிழ் இலக்கண ஆய்வில் டிஜிட்டல் தொழில்நுட்பத்தைப் புகுத்துதல்.
+
+---
+
+## 🗓️ 8 வாரப் பயிற்சித் திட்டம் (Syllabus Structure)
+
+### பகுதி 1: அடிப்படை அறிமுகம்
+* **வாரம் 1:** தொல்காப்பியம் - நூன்மரபு அறிமுகம் & `Open-Tamil` நூலகத்தை நிறுவுதல்.
+* **வாரம் 2:** எழுத்துக்களின் வகைப்பாடு மற்றும் பைத்தான் `List` உருவாக்கம்.
+* **வாரம் 3:** குறில், நெடில் விளக்கம் மற்றும் மாறிகளில் (Variables) மதிப்புகளைச் சேமித்தல்.
+* **வாரம் 4:** எழுத்துக்களின் மாத்திரை அளவு மற்றும் `print()` கட்டளைப் பயிற்சி.
+
+### பகுதி 2: தர்க்கம் மற்றும் செயற்கை நுண்ணறிவு
+* **வாரம் 5:** `if-else` நிபந்தனைகள் மூலம் குறில்/நெடில் கண்டறியும் நிரல் உருவாக்குதல்.
+* **வாரம் 6:** உயிர் எழுத்துக்களின் வரிசை மற்றும் சிக்கல் தீர்க்கப் படிமுறை (Algorithm) பயிற்சி.
+* **வாரம் 7:** மெய் எழுத்துக்களின் வகைப்பாடு (வல்லினம், மெல்லினம், இடையினம்) - DeepSeek AI வழிகாட்டுதல்.
+* **வாரம் 8:** உயிர்மெய் பிறப்பு மற்றும் புள்ளியின் இயல்பு - `def` செயல்பாடுகள் (Functions) மூலம் நிரலாக்கம்.
+
+---
+
+## 💻 பயன்படுத்தப்படும் தொழில்நுட்பங்கள்
+* **மொழி:** Python 3.x
+* **நூலகம்:** Open-Tamil (pip install open-tamil)
+* **AI கருவிகள்:** DeepSeek, Gemini (நிரல் உருவாக்க உதவிக்கு)
+
+---
+
+## 📞 தொடர்பு கொள்ள
+பாடநெறியில் இணைய மற்றும் சந்தேகங்களுக்கு:
+
+* **மின்னஞ்சல்:** [sathiyarajkkt@gmail.com](mailto:sathiyarajkkt@gmail.com)
+* **புலனம் (WhatsApp):** +91 9600370671
+* **இணையதளம்:** [https://neyakkoot.github.io/Tolkaappiyam-with-AI-Python/](https://neyakkoot.github.io/Tolkaappiyam-with-AI-Python/)
+
+---
+*© 2026 முனைவர் சத்தியராஜ் தங்கச்சாமி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.*
